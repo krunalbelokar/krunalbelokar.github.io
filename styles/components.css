@@ -1392,6 +1392,13 @@
   color: #065F46;
 }
 
+.form-feedback.error {
+  display: block;
+  background: #FEF2F2;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #991B1B;
+}
+
 /* --- FOOTER --- */
 .footer {
   border-top: 1px solid var(--border-default);
