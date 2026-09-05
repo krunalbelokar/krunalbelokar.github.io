@@ -122,14 +122,19 @@
         return;
       }
 
-      // Display clean success acknowledgment
-      feedback.textContent = `Thank you, ${name}! Your message has been received. I will get back to you shortly at ${email}.`;
-      feedback.className = "form-feedback success";
-      form.reset();
+      // Format clean message for WhatsApp
+      const formattedText = `Hi Krunal,\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n\n(Sent via your AI Engineer Portfolio)`;
+      const whatsappUrl = `https://api.whatsapp.com/send?phone=917219680894&text=${encodeURIComponent(formattedText)}`;
 
-      setTimeout(() => {
-        feedback.style.display = "none";
-      }, 6000);
+      // Display clean success acknowledgment with direct link
+      feedback.innerHTML = `<span>✓</span> Opening WhatsApp chat with Krunal Belokar... If it didn't open automatically, <a href="${whatsappUrl}" target="_blank" rel="noopener noreferrer" style="color: #065F46; font-weight: 700; text-decoration: underline;">click here to launch WhatsApp</a>.`;
+      feedback.className = "form-feedback success";
+      feedback.style.display = "block";
+
+      // Open WhatsApp chat in new window / app
+      window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+
+      form.reset();
     });
   }
 
