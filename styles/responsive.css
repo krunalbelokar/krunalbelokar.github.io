@@ -1,0 +1,161 @@
+/* ==========================================================================
+   RESPONSIVE LAYOUTS & BREAKPOINTS
+   ========================================================================== */
+
+/* Laptop / Medium Desktops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  :root {
+    --font-hero: 3rem;
+  }
+
+  .project-body {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .promptlab-models-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .workstation-floating-editor {
+    position: static;
+    width: 100%;
+    margin-top: 14px;
+  }
+}
+
+/* Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+  .section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .nav-links, .nav-actions .btn-primary {
+    display: none;
+  }
+
+  .nav-hamburger {
+    display: flex;
+  }
+
+  .hero-section {
+    padding-top: calc(var(--nav-height) + 32px);
+    padding-bottom: 48px;
+  }
+
+  .hero-headline {
+    font-size: 2.35rem;
+  }
+
+  .tech-strip-track {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tech-strip-item {
+    flex-shrink: 0;
+  }
+
+  .doc-demo-main {
+    grid-template-columns: 1fr;
+  }
+
+  .doc-demo-preview {
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .edu-award-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .cta-banner {
+    padding: 36px 20px;
+  }
+
+  .project-header {
+    padding: 24px;
+  }
+
+  .project-body {
+    padding: 24px;
+  }
+
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-spotlight-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .about-spotlight-photo {
+    max-width: 180px;
+    height: 200px;
+  }
+
+  .heatmap-grid-container {
+    overflow-x: auto;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  :root {
+    --font-hero: 2rem;
+  }
+
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero-headline {
+    font-size: 1.95rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-socials {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .workstation-platform {
+    padding: 10px;
+  }
+
+  .project-capabilities-list {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    padding: 20px 16px;
+  }
+}
