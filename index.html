@@ -15,14 +15,17 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://krunalbelokar.github.io/">
+  <meta property="og:site_name" content="Krunal Belokar — AI Engineer Portfolio">
   <meta property="og:title" content="Krunal Belokar — AI Engineer | Generative AI &amp; LLM Applications">
   <meta property="og:description" content="Building intelligent applications with modern AI systems, multimodal LLMs, RAG, and structured generation.">
-  <meta property="og:image" content="assets/favicon.svg">
+  <meta property="og:image" content="assets/krunal_belokar.png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:title" content="Krunal Belokar — AI Engineer | Generative AI &amp; LLM Applications">
   <meta property="twitter:description" content="Building intelligent applications with modern AI systems, multimodal LLMs, RAG, and structured generation.">
+  <meta property="twitter:image" content="assets/krunal_belokar.png">
+  <meta name="theme-color" content="#F8FAFC">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -104,6 +107,10 @@
       </nav>
 
       <div class="nav-actions">
+        <button class="btn-share btn-open-share" aria-label="Share Portfolio" title="Share Portfolio">
+          <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+          <span>Share</span>
+        </button>
         <a href="#contact" class="btn btn-primary btn-sm">Get In Touch</a>
         <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle Mobile Menu" aria-expanded="false">
           <span></span>
@@ -122,7 +129,11 @@
     <a href="#expertise" class="mobile-nav-link">Expertise</a>
     <a href="#lab" class="mobile-nav-link">AI Lab</a>
     <a href="#contact" class="mobile-nav-link">Contact</a>
-    <div style="display: flex; gap: 12px; margin-top: 12px;">
+    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 14px;">
+      <button class="btn btn-secondary btn-open-share" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+        Share Portfolio
+      </button>
       <a href="#contact" class="btn btn-primary" style="width: 100%;">Get In Touch</a>
     </div>
   </div>
@@ -159,6 +170,10 @@
         <a href="#contact" class="btn btn-secondary btn-lg">
           Get In Touch
         </a>
+        <button class="btn btn-secondary btn-lg btn-open-share" style="display: inline-flex; align-items: center; gap: 8px;" title="Share this portfolio with recruiters &amp; teams">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+          Share Profile
+        </button>
       </div>
 
       <!-- Quick Socials -->
@@ -1350,6 +1365,7 @@
       </div>
       <div class="footer-links">
         <a href="#hero" class="footer-link">Back to Top ↑</a>
+        <button class="footer-link btn-open-share" style="background:none; border:none; padding:0; cursor:pointer;" title="Share this portfolio">Share ↗</button>
         <a href="tel:+917219680894" class="footer-link">+91 7219680894</a>
         <a href="https://github.com/krunalbelokar" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
         <a href="https://www.linkedin.com/in/krunal-belokar-b4a78b348/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
@@ -1358,12 +1374,73 @@
     </div>
   </footer>
 
+  <!-- ==================== SHARE MODAL DIALOG ==================== -->
+  <div class="share-modal" id="share-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="share-modal-title">
+    <div class="share-modal-dialog">
+      <div class="share-modal-header">
+        <h3 class="share-modal-title" id="share-modal-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+          Share Portfolio
+        </h3>
+        <button class="share-modal-close" id="share-modal-close" aria-label="Close Share Modal">&times;</button>
+      </div>
+
+      <!-- Preview Snippet -->
+      <div class="share-preview-card">
+        <img src="assets/krunal_belokar.png" alt="Krunal Belokar" class="share-preview-avatar">
+        <div class="share-preview-info">
+          <div class="share-preview-name">Krunal Belokar</div>
+          <div class="share-preview-role">AI Engineer • Generative AI &amp; LLMs</div>
+          <div class="share-preview-url">krunalbelokar.github.io</div>
+        </div>
+      </div>
+
+      <!-- Link Copy Field -->
+      <div class="share-section-label">Copy Direct Link</div>
+      <div class="share-input-group">
+        <input type="text" id="share-link-input" readonly value="https://krunalbelokar.github.io/" aria-label="Portfolio URL">
+        <button class="btn btn-primary btn-sm" id="share-copy-btn">Copy</button>
+      </div>
+
+      <!-- Social Quick Share Grid -->
+      <div class="share-section-label">Share to Networks</div>
+      <div class="share-social-grid">
+        <a href="#" class="share-social-btn linkedin" id="share-linkedin" aria-label="Share to LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.4 1.4 0 0 0 0-2.8 1.4 1.4 0 0 0 0 2.8m1.4 9.74v-8.37H5.06v8.37h2.8z"/></svg>
+          LinkedIn
+        </a>
+        <a href="#" class="share-social-btn whatsapp" id="share-whatsapp" aria-label="Share to WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.71 4.3 3.8.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/></svg>
+          WhatsApp
+        </a>
+        <a href="#" class="share-social-btn twitter" id="share-twitter" aria-label="Share to X">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          X / Twitter
+        </a>
+        <a href="#" class="share-social-btn email" id="share-email" aria-label="Share via Email">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Email
+        </a>
+      </div>
+
+      <!-- Live QR Code Card for In-Person Scanning -->
+      <div class="share-qr-card">
+        <div class="share-qr-canvas-wrapper" id="share-qr-canvas" aria-label="QR Code to scan portfolio"></div>
+        <div class="share-qr-text">
+          <div class="share-qr-title">Instant QR Code</div>
+          <div class="share-qr-desc">Scan with any mobile camera at interviews or meetups to open this portfolio instantly.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Scripts -->
   <script src="scripts/pipeline-visualizer.js"></script>
   <script src="scripts/doc-intelligence-demo.js"></script>
   <script src="scripts/promptlab-demo.js"></script>
   <script src="scripts/ai-terminal.js"></script>
   <script src="scripts/github-feed.js"></script>
+  <script src="scripts/share.js"></script>
   <script src="scripts/main.js"></script>
 </body>
 </html>
